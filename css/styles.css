@@ -2412,10 +2412,6 @@ html {
     -webkit-transform: rotate(180deg) translate(-15em) rotate(-180deg);
     -ms-transform: rotate(180deg) translate(-15em) rotate(-180deg);
     transform: rotate(180deg) translate(-15em) rotate(-180deg); } }
-[class*='sidebar'] {
-  width: 300px;
-  background-color: pink; }
-
 /* http://meyerweb.com/eric/tools/css/reset/
    v2.0 | 20110126
    License: none (public domain)
@@ -2446,7 +2442,6 @@ footer, header, hgroup, menu, nav, section {
   display: block; }
 
 body {
-  line-height: 1;
   background-color: wheat;
   font-family: 'Menlo'; }
 
@@ -2489,8 +2484,7 @@ li:hover {
   text-shadow: 3px 3px 3px red, -3px 3px 3px red, 3px -3px 3px red, -3px -3px 3px red; }
 
 h1 {
-  color: orange;
-  font-size: 23px;
+  font-size: 32px;
   font-family: fantasy;
   text-shadow: 3px 3px 3px red, -3px 3px 3px red, 3px -3px 3px red, -3px -3px 3px red;
   -webkit-animation: pulsate 3 1.5s 0s none;
@@ -2498,26 +2492,28 @@ h1 {
 
 a {
   text-decoration: none;
-  transition: all 0.2s linear; }
+  transition: all 0.7s ease;
+  -webkit-animation: pulsate 3 1.5s 0s none;
+  animation: pulsate 3 1.5s 0s none; }
 
 .main {
-  width: 1000px;
-  height: 100%;
-  background-color: mintcream; }
-
-.main-content {
+  width: 100%;
+  height: 300px*18;
+  background-color: mintcream;
+  flex-grow: 2;
   display: flex;
-  flex-wrap: wrap;
-  justify-content: center; }
+  justify-content: center;
+  flex-wrap: wrap; }
 
 [class*='sidebar'] {
   width: 300px;
-  height: auto;
+  height: 120vh;
   background-color: pink; }
 
 .wrapper {
   display: flex;
-  justify-content: center; }
+  justify-content: center;
+  height: 100vh; }
 
 .album1 {
   background-image: url("../img/album1.jpg");
@@ -2526,11 +2522,12 @@ a {
   height: 300px;
   width: 300px; }
   .album1:hover {
-    -webkit-animation: bounce 1 1s 0s none;
-    animation: bounce 1 1s 0s none; }
-  .album1:active {
-    -webkit-animation: pulsate 3 1.5s 0s none;
-    animation: pulsate 3 1.5s 0s none; }
+    -webkit-transition: all 0.5s 0s cubic-bezier(1, -0.6, 0.595, 0.835);
+    transition: all 0.5s 0s cubic-bezier(1, -0.6, 0.595, 0.835); }
+    .album1:hover:hover {
+      -webkit-transform: translateY(-1em) scale(2);
+      -ms-transform: translateY(-1em) scale(2);
+      transform: translateY(-1em) scale(2); }
 
 .album2 {
   background-image: url("../img/album2.jpg");
@@ -2539,11 +2536,12 @@ a {
   height: 300px;
   width: 300px; }
   .album2:hover {
-    -webkit-animation: bounce 1 1s 0s none;
-    animation: bounce 1 1s 0s none; }
-  .album2:active {
-    -webkit-animation: pulsate 3 1.5s 0s none;
-    animation: pulsate 3 1.5s 0s none; }
+    -webkit-transition: all 0.5s 0s cubic-bezier(1, -0.6, 0.595, 0.835);
+    transition: all 0.5s 0s cubic-bezier(1, -0.6, 0.595, 0.835); }
+    .album2:hover:hover {
+      -webkit-transform: translateY(-1em) scale(2);
+      -ms-transform: translateY(-1em) scale(2);
+      transform: translateY(-1em) scale(2); }
 
 .album3 {
   background-image: url("../img/album3.jpg");
@@ -2552,11 +2550,12 @@ a {
   height: 300px;
   width: 300px; }
   .album3:hover {
-    -webkit-animation: bounce 1 1s 0s none;
-    animation: bounce 1 1s 0s none; }
-  .album3:active {
-    -webkit-animation: pulsate 3 1.5s 0s none;
-    animation: pulsate 3 1.5s 0s none; }
+    -webkit-transition: all 0.5s 0s cubic-bezier(1, -0.6, 0.595, 0.835);
+    transition: all 0.5s 0s cubic-bezier(1, -0.6, 0.595, 0.835); }
+    .album3:hover:hover {
+      -webkit-transform: translateY(-1em) scale(2);
+      -ms-transform: translateY(-1em) scale(2);
+      transform: translateY(-1em) scale(2); }
 
 .album4 {
   background-image: url("../img/album4.jpg");
@@ -2565,11 +2564,12 @@ a {
   height: 300px;
   width: 300px; }
   .album4:hover {
-    -webkit-animation: bounce 1 1s 0s none;
-    animation: bounce 1 1s 0s none; }
-  .album4:active {
-    -webkit-animation: pulsate 3 1.5s 0s none;
-    animation: pulsate 3 1.5s 0s none; }
+    -webkit-transition: all 0.5s 0s cubic-bezier(1, -0.6, 0.595, 0.835);
+    transition: all 0.5s 0s cubic-bezier(1, -0.6, 0.595, 0.835); }
+    .album4:hover:hover {
+      -webkit-transform: translateY(-1em) scale(2);
+      -ms-transform: translateY(-1em) scale(2);
+      transform: translateY(-1em) scale(2); }
 
 .album5 {
   background-image: url("../img/album5.jpg");
@@ -2578,11 +2578,12 @@ a {
   height: 300px;
   width: 300px; }
   .album5:hover {
-    -webkit-animation: bounce 1 1s 0s none;
-    animation: bounce 1 1s 0s none; }
-  .album5:active {
-    -webkit-animation: pulsate 3 1.5s 0s none;
-    animation: pulsate 3 1.5s 0s none; }
+    -webkit-transition: all 0.5s 0s cubic-bezier(1, -0.6, 0.595, 0.835);
+    transition: all 0.5s 0s cubic-bezier(1, -0.6, 0.595, 0.835); }
+    .album5:hover:hover {
+      -webkit-transform: translateY(-1em) scale(2);
+      -ms-transform: translateY(-1em) scale(2);
+      transform: translateY(-1em) scale(2); }
 
 .album6 {
   background-image: url("../img/album6.jpg");
@@ -2591,11 +2592,12 @@ a {
   height: 300px;
   width: 300px; }
   .album6:hover {
-    -webkit-animation: bounce 1 1s 0s none;
-    animation: bounce 1 1s 0s none; }
-  .album6:active {
-    -webkit-animation: pulsate 3 1.5s 0s none;
-    animation: pulsate 3 1.5s 0s none; }
+    -webkit-transition: all 0.5s 0s cubic-bezier(1, -0.6, 0.595, 0.835);
+    transition: all 0.5s 0s cubic-bezier(1, -0.6, 0.595, 0.835); }
+    .album6:hover:hover {
+      -webkit-transform: translateY(-1em) scale(2);
+      -ms-transform: translateY(-1em) scale(2);
+      transform: translateY(-1em) scale(2); }
 
 .album7 {
   background-image: url("../img/album7.jpg");
@@ -2604,11 +2606,12 @@ a {
   height: 300px;
   width: 300px; }
   .album7:hover {
-    -webkit-animation: bounce 1 1s 0s none;
-    animation: bounce 1 1s 0s none; }
-  .album7:active {
-    -webkit-animation: pulsate 3 1.5s 0s none;
-    animation: pulsate 3 1.5s 0s none; }
+    -webkit-transition: all 0.5s 0s cubic-bezier(1, -0.6, 0.595, 0.835);
+    transition: all 0.5s 0s cubic-bezier(1, -0.6, 0.595, 0.835); }
+    .album7:hover:hover {
+      -webkit-transform: translateY(-1em) scale(2);
+      -ms-transform: translateY(-1em) scale(2);
+      transform: translateY(-1em) scale(2); }
 
 .album8 {
   background-image: url("../img/album8.jpg");
@@ -2617,11 +2620,12 @@ a {
   height: 300px;
   width: 300px; }
   .album8:hover {
-    -webkit-animation: bounce 1 1s 0s none;
-    animation: bounce 1 1s 0s none; }
-  .album8:active {
-    -webkit-animation: pulsate 3 1.5s 0s none;
-    animation: pulsate 3 1.5s 0s none; }
+    -webkit-transition: all 0.5s 0s cubic-bezier(1, -0.6, 0.595, 0.835);
+    transition: all 0.5s 0s cubic-bezier(1, -0.6, 0.595, 0.835); }
+    .album8:hover:hover {
+      -webkit-transform: translateY(-1em) scale(2);
+      -ms-transform: translateY(-1em) scale(2);
+      transform: translateY(-1em) scale(2); }
 
 .album9 {
   background-image: url("../img/album9.jpg");
@@ -2630,10 +2634,32 @@ a {
   height: 300px;
   width: 300px; }
   .album9:hover {
-    -webkit-animation: bounce 1 1s 0s none;
-    animation: bounce 1 1s 0s none; }
-  .album9:active {
-    -webkit-animation: pulsate 3 1.5s 0s none;
-    animation: pulsate 3 1.5s 0s none; }
+    -webkit-transition: all 0.5s 0s cubic-bezier(1, -0.6, 0.595, 0.835);
+    transition: all 0.5s 0s cubic-bezier(1, -0.6, 0.595, 0.835); }
+    .album9:hover:hover {
+      -webkit-transform: translateY(-1em) scale(2);
+      -ms-transform: translateY(-1em) scale(2);
+      transform: translateY(-1em) scale(2); }
+
+@media (max-width: 986px) {
+  .main {
+    height: 300px*2; } }
+@media (max-width: 768px) {
+  .sidebar1 {
+    width: 100vw;
+    height: 20vh;
+    flex-direction: column; }
+
+  .sidebar2 {
+    width: 100vw;
+    height: 20vh;
+    flex-direction: column;
+    background-color: navy; }
+
+  .wrapper {
+    flex-wrap: wrap; }
+
+  .main {
+    height: 300px*18; } }
 
 /*# sourceMappingURL=styles.css.map */
