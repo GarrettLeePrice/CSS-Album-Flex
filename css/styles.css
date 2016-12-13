@@ -2412,6 +2412,10 @@ html {
     -webkit-transform: rotate(180deg) translate(-15em) rotate(-180deg);
     -ms-transform: rotate(180deg) translate(-15em) rotate(-180deg);
     transform: rotate(180deg) translate(-15em) rotate(-180deg); } }
+[class*='sidebar'] {
+  width: 300px;
+  background-color: pink; }
+
 /* http://meyerweb.com/eric/tools/css/reset/
    v2.0 | 20110126
    License: none (public domain)
@@ -2443,7 +2447,7 @@ footer, header, hgroup, menu, nav, section {
 
 body {
   line-height: 1;
-  background-color: pink;
+  background-color: wheat;
   font-family: 'Menlo'; }
 
 ol, ul {
@@ -2495,5 +2499,141 @@ h1 {
 a {
   text-decoration: none;
   transition: all 0.2s linear; }
+
+.main {
+  width: 1000px;
+  height: 100%;
+  background-color: mintcream; }
+
+.main-content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center; }
+
+[class*='sidebar'] {
+  width: 300px;
+  height: auto;
+  background-color: pink; }
+
+.wrapper {
+  display: flex;
+  justify-content: center; }
+
+.album1 {
+  background-image: url("../img/album1.jpg");
+  background-position: center;
+  background-size: cover;
+  height: 300px;
+  width: 300px; }
+  .album1:hover {
+    -webkit-animation: bounce 1 1s 0s none;
+    animation: bounce 1 1s 0s none; }
+  .album1:active {
+    -webkit-animation: pulsate 3 1.5s 0s none;
+    animation: pulsate 3 1.5s 0s none; }
+
+.album2 {
+  background-image: url("../img/album2.jpg");
+  background-position: center;
+  background-size: cover;
+  height: 300px;
+  width: 300px; }
+  .album2:hover {
+    -webkit-animation: bounce 1 1s 0s none;
+    animation: bounce 1 1s 0s none; }
+  .album2:active {
+    -webkit-animation: pulsate 3 1.5s 0s none;
+    animation: pulsate 3 1.5s 0s none; }
+
+.album3 {
+  background-image: url("../img/album3.jpg");
+  background-position: center;
+  background-size: cover;
+  height: 300px;
+  width: 300px; }
+  .album3:hover {
+    -webkit-animation: bounce 1 1s 0s none;
+    animation: bounce 1 1s 0s none; }
+  .album3:active {
+    -webkit-animation: pulsate 3 1.5s 0s none;
+    animation: pulsate 3 1.5s 0s none; }
+
+.album4 {
+  background-image: url("../img/album4.jpg");
+  background-position: center;
+  background-size: cover;
+  height: 300px;
+  width: 300px; }
+  .album4:hover {
+    -webkit-animation: bounce 1 1s 0s none;
+    animation: bounce 1 1s 0s none; }
+  .album4:active {
+    -webkit-animation: pulsate 3 1.5s 0s none;
+    animation: pulsate 3 1.5s 0s none; }
+
+.album5 {
+  background-image: url("../img/album5.jpg");
+  background-position: center;
+  background-size: cover;
+  height: 300px;
+  width: 300px; }
+  .album5:hover {
+    -webkit-animation: bounce 1 1s 0s none;
+    animation: bounce 1 1s 0s none; }
+  .album5:active {
+    -webkit-animation: pulsate 3 1.5s 0s none;
+    animation: pulsate 3 1.5s 0s none; }
+
+.album6 {
+  background-image: url("../img/album6.jpg");
+  background-position: center;
+  background-size: cover;
+  height: 300px;
+  width: 300px; }
+  .album6:hover {
+    -webkit-animation: bounce 1 1s 0s none;
+    animation: bounce 1 1s 0s none; }
+  .album6:active {
+    -webkit-animation: pulsate 3 1.5s 0s none;
+    animation: pulsate 3 1.5s 0s none; }
+
+.album7 {
+  background-image: url("../img/album7.jpg");
+  background-position: center;
+  background-size: cover;
+  height: 300px;
+  width: 300px; }
+  .album7:hover {
+    -webkit-animation: bounce 1 1s 0s none;
+    animation: bounce 1 1s 0s none; }
+  .album7:active {
+    -webkit-animation: pulsate 3 1.5s 0s none;
+    animation: pulsate 3 1.5s 0s none; }
+
+.album8 {
+  background-image: url("../img/album8.jpg");
+  background-position: center;
+  background-size: cover;
+  height: 300px;
+  width: 300px; }
+  .album8:hover {
+    -webkit-animation: bounce 1 1s 0s none;
+    animation: bounce 1 1s 0s none; }
+  .album8:active {
+    -webkit-animation: pulsate 3 1.5s 0s none;
+    animation: pulsate 3 1.5s 0s none; }
+
+.album9 {
+  background-image: url("../img/album9.jpg");
+  background-position: center;
+  background-size: cover;
+  height: 300px;
+  width: 300px; }
+  .album9:hover {
+    -webkit-animation: bounce 1 1s 0s none;
+    animation: bounce 1 1s 0s none; }
+  .album9:active {
+    -webkit-animation: pulsate 3 1.5s 0s none;
+    animation: pulsate 3 1.5s 0s none; }
 
 /*# sourceMappingURL=styles.css.map */
