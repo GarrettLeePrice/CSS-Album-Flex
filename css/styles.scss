@@ -2,12 +2,6 @@
 @import "neat/neat";
 @import "saffron/saffron";
 
-@mixin redglow {
-	text-shadow: 3px 3px 3px red,
-	-3px 3px 3px red,
-	3px -3px 3px red,
-	-3px -3px 3px red;
-}
 
 /* http://meyerweb.com/eric/tools/css/reset/
    v2.0 | 20110126
@@ -40,8 +34,8 @@ footer, header, hgroup, menu, nav, section {
 	display: block;
 }
 body {
-  background-color: wheat;
   font-family: 'Menlo';
+	max-width: 1650px;
 
 }
 ol, ul {
@@ -61,38 +55,36 @@ table {
 }
 
 
-// variables
-$albumsize: 300px;
-
 /*flex container*/
 header {
   border-bottom: 2px solid firebrick;
 }
-.flex-container {
+.nav {
   display: flex;
   justify-content: space-around;
-  background: mintcream;
-  width:970px;
+  background: black;
+  width:100vw;
+	max-width: 1650px;
   margin:0 auto;
   height: 105px;
   align-items: center;
 
 }
-.flex-container ul {
+.nav ul {
   display: flex;
+}
+
+.nav img {
+	display: flex;
 }
 li {
   padding-left: 10px;
   font-family: monospace;
 }
-li:hover {
-  @include redglow;
-}
+
 h1 {
   font-size: 32px;
   font-family: fantasy;
-	@include redglow;
-	@include pulsate();
 
 }
 a {
@@ -103,8 +95,7 @@ a {
 
 .main {
 	width: 100%;
-	// height: 120vh;
-	height: #{$albumsize}*18;
+	height: 120vh;
 	background-color: mintcream;
 	flex-grow: 2;
 	display: flex;
@@ -115,22 +106,14 @@ a {
 [class*='sidebar'] {
 	width: 300px;
 	height: 120vh;
-	background-color: pink;
+	background-color: silver;
 
 }
-
-// .main-content {
-// 	display: flex;
-// 	flex-wrap: wrap;
-// 	justify-content: center;
-// 	// height: auto;
-// }
 
 .wrapper {
 	display: flex;
 	justify-content: center;
-	height: 100vh;
-	// flex-wrap: wrap;
+	max-width: 1650px;
 }
 
 // begin Sass sorcery
@@ -145,40 +128,59 @@ $numbers: 1,2,3,4,5,6,7,8,9;
   background-image: url('../img/album#{$number}.jpg');
   background-position: center;
   background-size: cover;
-	height:$albumsize;
-	width:$albumsize;
+	height:300px;
+	width:300px;
 	}
 
 }
+
+footer {
+	width: 100vw;
+	height: 100px;
+	background-color: black;
+	align-self: flex-end;
+}
+
 // media query
 
-@media (max-width: 986px) {
+@media (min-width: 1327px) {
 	.main {
-		height: #{$albumsize}*2;
+		padding-top: 50px;
+		height: 90vh;
+		justify-content: space-around;
+	}
+	.sidebar1 {
+		height: 90vh;
+
+	}
+	.sidebar2 {
+			height: 90vh;
 	}
 }
 
+@media (max-width: 985px){
+	.main {
+		height: 220vh;
+	}
+	.sidebar1,
+	.sidebar2 {
+		height: 220vh;
+	}
+}
 
 @media (max-width: 768px){
 	.sidebar1 {
 		width: 100vw;
-		height: 20vh;
-		flex-direction: column;
+		height: 10vh;
 	}
 	.sidebar2 {
 				width: 100vw;
-				height: 20vh;
-				flex-direction: column;
-				background-color: navy;
+				height: 10vh;
 	}
-
 	.wrapper {
 		flex-wrap: wrap;
-
 	}
-
-	.main {
-		height: #{$albumsize}*18;
+	.nav ul {
+		display: none;
 	}
-
 }

@@ -1,17 +1,13 @@
-# Magic Navbar :art:
+# Album Flex
+
 ### By _Alexander Jacks & Garrett Price_
 _an Epicodus Joint, 2016_
 
 ### Description
-A nice premade CSS navbar for your site. Also has super easy to use animations. Check out Saffron.
+A mock-up of albumartexchange.com laid out using CSS flex box.
 
-![screenshot](screenshot.png)
+![screenshot](AAscreenshot.png)
 
-- Now visit:
-
-## Why To Use This
-- premade kit for Sass/Bourbon/Neat/saffron
-- cool 'slow glow' on navbar hover
 
 ## Technologies Used
 - Application: Sass + Saffron
